@@ -209,6 +209,9 @@ async function validateBundle(entry) {
   if (typeof manifest.icon === 'string' && manifest.icon && !files.has(manifest.icon)) {
     fail(`${at}: manifest icon "${manifest.icon}" missing from bundle`)
   }
+  if (typeof manifest.rules === 'string' && manifest.rules && !files.has(manifest.rules)) {
+    fail(`${at}: manifest rules "${manifest.rules}" missing from bundle`)
+  }
 }
 
 // --- main --------------------------------------------------------------------

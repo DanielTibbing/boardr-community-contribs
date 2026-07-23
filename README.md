@@ -67,6 +67,10 @@ Relative `downloadUrl`/`iconUrl` paths resolve against this repo's raw URL.
 - **Duplicate fields**: the entry intentionally duplicates the manifest inside
   the bundle — one fetch renders the whole store. CI fails the PR if they
   disagree.
+- **Rulebook**: strongly recommended. Declare `"rules": "rules.md"` in your
+  manifest and ship the markdown file in the bundle — players can open it from
+  the table or their phone at any point during a game. CI checks the declared
+  file exists.
 
 ## What CI checks (`scripts/validate.mjs`)
 
