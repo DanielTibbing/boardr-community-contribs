@@ -1,0 +1,21 @@
+name: validate registry
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # git show origin/<base>:games.json needs the base branch available
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate games.json and changed bundles
+        run: node scripts/validate.mjs
