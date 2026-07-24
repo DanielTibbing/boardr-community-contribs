@@ -102,7 +102,7 @@ Moves from a player who isn't `currentPlayer` are rejected unless the move is `a
 
 ## Interrupt windows
 
-Some games need *several* players to act at once — mahjong claims (pon/chi/ron), simultaneous bids, reaction cards. Define `actors` and the engine gates moves on your set instead of the single turn holder:
+Some games need *several* players to act at once — mahjong claims (pèng/chī/hú), simultaneous bids, reaction cards. Define `actors` and the engine gates moves on your set instead of the single turn holder:
 
 ```ts
 actors: (state, ctx) =>
