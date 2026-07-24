@@ -24,6 +24,30 @@
       "downloadUrl": "bundles/io.github.danieltibbing.palace/io.github.danieltibbing.palace-0.1.0.boardrgame",
       "sha256": "e2a0fbe3347cfbd2d55c5dcbafd3e98b865f599627087460b65be9b1c418d785",
       "sizeBytes": 179666
+    },
+    {
+      "id": "io.github.danieltibbing.monopolydeal",
+      "name": "Monopoly Deal",
+      "description": "The fast card game: bank money, build property sets, and raid your rivals with Rent, Sly Deal, and Deal Breaker \u2014 first to three complete sets wins. Just Say No to fight back.",
+      "tags": [
+        "cards",
+        "strategy",
+        "family",
+        "take-that"
+      ],
+      "version": "0.1.0",
+      "sdkVersion": "^0.1.0",
+      "players": {
+        "min": 2,
+        "max": 5
+      },
+      "phoneMode": "required",
+      "author": "DanielTibbing",
+      "homepage": "https://github.com/DanielTibbing/boardr-monopoly-deal",
+      "iconUrl": "icons/io.github.danieltibbing.monopolydeal.svg",
+      "downloadUrl": "bundles/io.github.danieltibbing.monopolydeal/io.github.danieltibbing.monopolydeal-0.1.0.boardrgame",
+      "sha256": "dcecaeb1d1334547116bcb658ea4328ced05b56c59dbf78e67051b813e945372",
+      "sizeBytes": 201794
     }
   ]
 }
