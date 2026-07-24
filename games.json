@@ -1,4 +1,29 @@
 {
   "registryVersion": 1,
-  "games": []
+  "games": [
+    {
+      "id": "io.github.danieltibbing.palace",
+      "name": "Palace",
+      "description": "Shed every card: climb the discard pile, reset it with a 2, burn it with a 10 \u2014 then survive your blind face-down cards.",
+      "tags": [
+        "cards",
+        "shedding",
+        "family",
+        "luck"
+      ],
+      "version": "0.1.0",
+      "sdkVersion": "^0.1.0",
+      "players": {
+        "min": 2,
+        "max": 5
+      },
+      "phoneMode": "required",
+      "author": "DanielTibbing",
+      "homepage": "https://github.com/DanielTibbing/boardr-palace",
+      "iconUrl": "icons/io.github.danieltibbing.palace.svg",
+      "downloadUrl": "bundles/io.github.danieltibbing.palace/io.github.danieltibbing.palace-0.1.0.boardrgame",
+      "sha256": "e2a0fbe3347cfbd2d55c5dcbafd3e98b865f599627087460b65be9b1c418d785",
+      "sizeBytes": 179666
+    }
+  ]
 }
