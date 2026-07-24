@@ -1,8 +1,8 @@
 # CLI
 
-The `boardr` CLI covers the whole authoring loop. It ships with the monorepo (`packages/cli`); inside a scaffolded game it's a dev dependency, so `npx boardr …` just works.
+The `boardr` CLI covers the whole authoring loop. It's on npm as `@boardr/cli`: scaffold with `npx @boardr/cli create`, and inside a scaffolded game the CLI is a dev dependency so plain `npx boardr …` works from there on.
 
-## `boardr create <name>`
+## `npx @boardr/cli create <name>`
 
 Scaffolds a complete, working game in `./<name>/` — Tap Race, with logic, board and phone UIs, tests, an icon, a rulebook, and a manifest wired for all of them. `npm install && npm run build` and it's playable.
 

@@ -13,36 +13,21 @@ boardr is a digital boardgame table: an app on a shared screen (a touchscreen ta
 
 ## Run the table
 
-Clone and start the board app in dev mode:
-
-```sh
-git clone https://github.com/DanielTibbing/boardr.git
-cd boardr
-pnpm install
-pnpm build
-pnpm --filter @boardr/board dev
-```
-
-The window that opens is the table. Phones on the same network browse to the URL it shows (or scan the QR once a lobby is open).
-
-You can also run the server headless — useful for testing without Electron:
-
-```sh
-pnpm --filter @boardr/board server
-```
+Download the packaged app for your platform from the
+[releases page](https://github.com/DanielTibbing/boardr-community-contribs/releases)
+and run it. The window that opens is the table. Phones on the same network
+browse to the URL it shows (or scan the QR once a lobby is open).
 
 ## Make your first game
 
-::: info Not on npm yet
-`boardr` and `@boardr/sdk` aren't published to npm yet, so run these commands **from inside the cloned boardr repo** — the workspace resolves them. Standalone `npm install` for scaffolded games lands with the first npm release.
-:::
-
-Scaffold a game:
+Everything you need is on npm — scaffold a game anywhere:
 
 ```sh
-npx boardr create my-game
+npx @boardr/cli create my-game
 cd my-game
+npm install
 npm run build
+npm test
 ```
 
 You get a complete, working game — **Tap Race** — with logic, a board UI, a phone UI, tests, an icon, and a rulebook. The [tutorial](/guide/tutorial) walks through every line.
