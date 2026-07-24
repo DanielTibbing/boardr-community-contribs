@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#020c1b"/>
+    </linearGradient>
+    <linearGradient id="spade-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-grad)"/>
+  <rect x="6" y="6" width="116" height="116" rx="22" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.6"/>
+  <path d="M 64 26 C 42 50 30 64 30 78 C 30 90 39 97 50 97 C 59 97 62 91 64 88 C 66 91 69 97 78 97 C 89 97 98 90 98 78 C 98 64 86 50 64 26 Z" fill="url(#spade-grad)"/>
+  <path d="M 64 84 C 62 94 56 100 48 102 L 80 102 C 72 100 66 94 64 84 Z" fill="url(#spade-grad)"/>
+</svg>
