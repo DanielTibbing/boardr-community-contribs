@@ -100,6 +100,19 @@ By default the turn passes to the next seat clockwise when a move calls `ctx.eve
 
 Moves from a player who isn't `currentPlayer` are rejected unless the move is `alwaysAllowed` (then gate it yourself with `canMove`/`ctx.invalid`).
 
+## Interrupt windows
+
+Some games need *several* players to act at once — mahjong claims (pon/chi/ron), simultaneous bids, reaction cards. Define `actors` and the engine gates moves on your set instead of the single turn holder:
+
+```ts
+actors: (state, ctx) =>
+  state.public.claim
+    ? playersWhoHaveNotRespondedYet(state)   // the window
+    : [ctx.currentPlayer],                   // normal turns
+```
+
+The turn holder stays `currentPlayer`; `meta.actors` tells every UI who may act right now. Keep the window's bookkeeping (who's eligible, who has responded, what priority wins) in `public` state and resolve it in the responding moves — see `games/mahjong` for the full pattern.
+
 ## Ending the game
 
 `endIf` runs after every committed move:
