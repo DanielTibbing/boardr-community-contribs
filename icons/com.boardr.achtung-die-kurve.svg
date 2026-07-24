@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="28" fill="#0a0b10"/>
+  <!-- Glowing border -->
+  <rect x="6" y="6" width="116" height="116" rx="22" fill="none" stroke="#00f5ff" stroke-width="2" opacity="0.3"/>
+  <!-- Paths representing curves -->
+  <path d="M25,85 C25,50 65,40 60,85 C55,120 100,100 100,50" fill="none" stroke="#ff007f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M100,85 C100,110 50,110 40,65 C30,20 80,20 85,45" fill="none" stroke="#00f5ff" stroke-width="6" stroke-linecap="round"/>
+  <!-- Heads/dots -->
+  <circle cx="100" cy="50" r="5" fill="#ffffff"/>
+  <circle cx="100" cy="50" r="8" fill="none" stroke="#ff007f" stroke-width="2"/>
+  
+  <circle cx="85" cy="45" r="5" fill="#ffffff"/>
+  <circle cx="85" cy="45" r="8" fill="none" stroke="#00f5ff" stroke-width="2"/>
+</svg>

@@ -72,6 +72,31 @@
       "downloadUrl": "bundles/io.github.danieltibbing.solitaire/io.github.danieltibbing.solitaire-0.1.0.boardrgame",
       "sha256": "3210eee4bd869840f21f1bb8827d4f7e0f201bf93dddff59ac123399807894fb",
       "sizeBytes": 177329
+    },
+    {
+      "id": "com.boardr.achtung-die-kurve",
+      "name": "Achtung Die Kurve",
+      "description": "Achtung die Kurve! Steer your glowing lines, dodge other players' trails and the arena borders, and survive to win in this fast-paced neon battle.",
+      "tags": [
+        "real-time",
+        "party",
+        "neon",
+        "action"
+      ],
+      "version": "0.1.0",
+      "sdkVersion": "^0.1.0",
+      "players": {
+        "min": 1,
+        "max": 4
+      },
+      "phoneMode": "required",
+      "author": "DanielTibbing",
+      "homepage": "https://github.com/DanielTibbing/boardr-achtung-die-kurve",
+      "iconUrl": "icons/com.boardr.achtung-die-kurve.svg",
+      "downloadUrl": "bundles/com.boardr.achtung-die-kurve/com.boardr.achtung-die-kurve-0.1.0.boardrgame",
+      "sha256": "5eb755256644cd6c3ddeaca45441c7e687799bc6553c41058114012b641df168",
+      "sizeBytes": 169802
     }
   ]
 }
+
