@@ -1,5 +1,7 @@
 # boardr community registry
 
+**📚 Developer docs: <https://danieltibbing.github.io/boardr-community-contribs/>** — getting started, SDK guide, tutorial, publishing guide, protocol reference. Source lives in [`docs/`](docs/) and deploys to this repo's GitHub Pages on every push.
+
 The curated index of community-made [boardr](https://github.com/DanielTibbing/boardr) games.
 Boards fetch `games.json` from this repo to render their **Community** tab; installing a
 game downloads the pinned `.boardrgame` bundle and verifies its sha256.

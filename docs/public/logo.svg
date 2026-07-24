@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="felt" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#232d21"/>
+      <stop offset="1" stop-color="#0c100b"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#f8ca6b"/>
+      <stop offset="0.55" stop-color="#f2b13d"/>
+      <stop offset="1" stop-color="#cf9226"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#felt)"/>
+  <g transform="rotate(-9 64 65)">
+    <rect x="38" y="39" width="52" height="52" rx="12" fill="url(#brass)"/>
+    <g fill="#10140f">
+      <circle cx="51" cy="52" r="5.2"/>
+      <circle cx="77" cy="52" r="5.2"/>
+      <circle cx="64" cy="65" r="5.2"/>
+      <circle cx="51" cy="78" r="5.2"/>
+      <circle cx="77" cy="78" r="5.2"/>
+    </g>
+  </g>
+</svg>
