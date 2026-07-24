@@ -74,7 +74,7 @@
       "sizeBytes": 177329
     },
     {
-      "id": "com.boardr.achtung-die-kurve",
+      "id": "io.github.danieltibbing.achtung-die-kurve",
       "name": "Achtung Die Kurve",
       "description": "Achtung die Kurve! Steer your glowing lines, dodge other players' trails and the arena borders, and survive to win in this fast-paced neon battle.",
       "tags": [
@@ -92,10 +92,10 @@
       "phoneMode": "required",
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-achtung-die-kurve",
-      "iconUrl": "icons/com.boardr.achtung-die-kurve.svg",
-      "downloadUrl": "bundles/com.boardr.achtung-die-kurve/com.boardr.achtung-die-kurve-0.1.0.boardrgame",
-      "sha256": "5eb755256644cd6c3ddeaca45441c7e687799bc6553c41058114012b641df168",
-      "sizeBytes": 169802
+      "iconUrl": "icons/io.github.danieltibbing.achtung-die-kurve.svg",
+      "downloadUrl": "bundles/io.github.danieltibbing.achtung-die-kurve/io.github.danieltibbing.achtung-die-kurve-0.1.0.boardrgame",
+      "sha256": "a5b6c6558346babc1f70532ce76145718e5093a4f9b5af2724f095d10147bb89",
+      "sizeBytes": 169815
     }
   ]
 }
