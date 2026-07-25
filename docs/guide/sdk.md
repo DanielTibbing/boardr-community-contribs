@@ -87,9 +87,34 @@ Inside a move you have `ctx`:
 | `ctx.players` | seat-ordered `PlayerInfo[]` (id, seat, name, connection) |
 | `ctx.currentPlayer`, `ctx.turn` | whose turn, which turn |
 | `ctx.random` | the seeded RNG |
+| `ctx.options` | key-value dictionary of custom setup options selected during lobby setup |
 | `ctx.invalid(reason)` | reject the move — nothing commits, the reason reaches the dispatching UI |
 | `ctx.events.endTurn({ next? })` | end the turn, optionally naming the next player |
 | `ctx.events.endGame(result?)` | end the game immediately |
+
+## Game Options
+
+If your game manifest defines an `optionsSchema` (see [manifest schema](/reference/manifest)), the platform lobby/launch screen automatically renders settings inputs before the match starts.
+
+These chosen settings are validated and supplied to your game at startup via `ctx.options`:
+
+- **In `setup`:** `ctx.options` contains the key-value dictionary of selected options. Use them to set up initial state:
+  ```ts
+  setup: (ctx) => {
+    const maxRolls = (ctx.options?.maxRolls as number) ?? 3
+    return {
+      public: { maxRolls, rollsLeft: maxRolls },
+      secret: {}
+    }
+  }
+  ```
+- **In moves/canMove:** `ctx.options` is also available on `ctx` inside move validation and execution handlers:
+  ```ts
+  move: (state, ctx) => {
+    const limit = ctx.options?.turnTimeLimit ?? 30
+    // ...
+  }
+  ```
 
 ## Turn order
 

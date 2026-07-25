@@ -11,13 +11,34 @@ Every bundle has a `boardr.game.json` at its root. It's the game's identity card
   "minPlayers": 2,
   "maxPlayers": 6,
   "phoneMode": "optional",
-  "sdkVersion": "^0.1.0",
+  "sdkVersion": "^0.2.0",
   "entries": {
     "logic": "dist/logic.js",
     "boardUi": "dist/board.js",
     "phoneUi": "dist/phone.js"
   },
-  "description": "One or two sentences for the store card.",
+  "optionsSchema": {
+    "easyMode": {
+      "type": "boolean",
+      "label": "Easy Mode",
+      "default": false
+    },
+    "pointsToWin": {
+      "type": "number",
+      "label": "Points to Win",
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "default": 50
+    },
+    "variant": {
+      "type": "select",
+      "label": "Game Variant",
+      "options": ["Standard", "Speedrun", "Chaos"],
+      "default": "Standard"
+    }
+  },
+  "description": "One or two sentences for the store copy.",
   "tags": ["cards", "bluffing"],
   "icon": "icon.svg",
   "rules": "rules.md"
@@ -38,6 +59,7 @@ Every bundle has a `boardr.game.json` at its root. It's the game's identity card
 | `entries.logic` | ✓ | built logic module (worker-side). `boardr build` emits `dist/logic.js` (+ a `.cjs` twin for dropped-in folders) |
 | `entries.boardUi` | – | built board UI (ESM, React) |
 | `entries.phoneUi` | – | built phone UI. Required in practice when `phoneMode` isn't `none` — phones fall back to a generic turn card without it |
+| `optionsSchema` | – | custom options schema for pre-game configuration (e.g. game rules, limits, modes). See the SDK docs for logic usage. |
 | `description` | – | ≤ 280 chars; store copy |
 | `tags` | – | ≤ 6, lowercase kebab-case; drive library filters |
 | `icon` | – | relative path to an svg/png in the bundle |
