@@ -22,8 +22,8 @@
       "homepage": "https://github.com/DanielTibbing/boardr-palace",
       "iconUrl": "icons/io.github.danieltibbing.palace.svg",
       "downloadUrl": "bundles/io.github.danieltibbing.palace/io.github.danieltibbing.palace-0.1.0.boardrgame",
-      "sha256": "fb7fa8370d76c21cfee95449669b1f0ab6e670cb47e9a9bbe9ef87ce377e1453",
-      "sizeBytes": 181684
+      "sha256": "6f53509ae82662a5bd1ecd8770293fb80dd3b6be2d91ba28d1559760eca85ca6",
+      "sizeBytes": 181545
     },
     {
       "id": "io.github.danieltibbing.monopolydeal",
