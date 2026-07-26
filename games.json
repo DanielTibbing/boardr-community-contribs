@@ -96,6 +96,29 @@
       "downloadUrl": "bundles/io.github.danieltibbing.achtung-die-kurve/io.github.danieltibbing.achtung-die-kurve-0.1.0.boardrgame",
       "sha256": "28a951c5944a565f697127df5065938354a65880c284c088d85103a86421f5c6",
       "sizeBytes": 171828
+    },
+    {
+      "id": "io.github.danieltibbing.pong",
+      "name": "Boardr Pong",
+      "description": "A fast-paced multiplayer Pong game for 2 to 8 players. Protect your goal line as the map dynamically shapes itself to match the player count, and survive a growing storm of balls!",
+      "tags": [
+        "arcade",
+        "action",
+        "party"
+      ],
+      "version": "0.1.0",
+      "sdkVersion": "^0.2.0",
+      "players": {
+        "min": 2,
+        "max": 8
+      },
+      "phoneMode": "required",
+      "author": "DanielTibbing",
+      "homepage": "https://github.com/DanielTibbing/boardr-pong",
+      "iconUrl": "icons/io.github.danieltibbing.pong.svg",
+      "downloadUrl": "bundles/io.github.danieltibbing.pong/io.github.danieltibbing.pong-0.1.0.boardrgame",
+      "sha256": "5284628da4066b9b6e0ef16457c317da223ec7fb757ccad59763d06ff065fa21",
+      "sizeBytes": 178243
     }
   ]
 }
