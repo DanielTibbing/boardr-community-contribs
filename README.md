@@ -19,7 +19,7 @@ game downloads the pinned `.boardrgame` bundle and verifies its sha256.
 
 Download the packaged board app for your platform from the [releases page](https://github.com/DanielTibbing/boardr-community-contribs/releases) and open it.
 
-### macOS "App is damaged" Workaround
+### macOS: "App is damaged" Workaround
 Because the release builds are unsigned, macOS Gatekeeper will quarantine the app and display the warning: `"boardr" is damaged and can't be opened. You should move it to the Trash.`
 
 To bypass this, strip the quarantine flag in your terminal:
@@ -27,6 +27,16 @@ To bypass this, strip the quarantine flag in your terminal:
 xattr -cr /path/to/boardr.app
 # e.g., if moved to Applications:
 xattr -cr /Applications/boardr.app
+```
+
+### Windows: SmartScreen Warning
+Microsoft Defender SmartScreen will block the unrecognized installer. To run the app, click **"More info"** on the blue warning banner, then select the **"Run anyway"** button.
+
+### Linux: Execution Permissions
+Before running the downloaded `.AppImage` package, ensure it has execution permissions. You can set this via your GUI file manager (Right-click ➔ Properties ➔ Allow executing file as program) or in the terminal:
+```sh
+chmod +x boardr-*.AppImage
+./boardr-*.AppImage
 ```
 
 ## Submitting a game

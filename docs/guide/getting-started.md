@@ -15,13 +15,17 @@ boardr is a digital boardgame table: an app on a shared screen (a touchscreen ta
 
 Download the packaged app for your platform from the [releases page](https://github.com/DanielTibbing/boardr-community-contribs/releases) and run it. The window that opens is the table. Phones on the same network browse to the URL it shows (or scan the QR once a lobby is open).
 
-::: tip macOS "App is damaged" Warning
-Since these builds are unsigned, macOS Gatekeeper may refuse to open the app and claim it is **damaged**. 
-
-To bypass this, strip the internet download quarantine attribute via your terminal:
-```sh
-xattr -cr /path/to/boardr.app
-```
+::: tip Running Unsigned Builds
+Since the release builds are currently unsigned:
+* **macOS:** Gatekeeper may block the app and claim it is **damaged**. Strip the quarantine attribute in your terminal:
+  ```sh
+  xattr -cr /path/to/boardr.app
+  ```
+* **Windows:** SmartScreen will display an unrecognized application warning. Click **"More info"** on the warning banner, then click **"Run anyway"**.
+* **Linux:** Ensure the downloaded `.AppImage` has execution permissions. Set this via your GUI file manager properties or run:
+  ```sh
+  chmod +x boardr-*.AppImage
+  ```
 :::
 
 ## Make your first game
