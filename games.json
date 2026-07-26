@@ -12,7 +12,7 @@
         "luck"
       ],
       "version": "0.1.0",
-      "sdkVersion": "^0.1.0",
+      "sdkVersion": "^0.2.0",
       "players": {
         "min": 2,
         "max": 5
@@ -22,8 +22,8 @@
       "homepage": "https://github.com/DanielTibbing/boardr-palace",
       "iconUrl": "icons/io.github.danieltibbing.palace.svg",
       "downloadUrl": "bundles/io.github.danieltibbing.palace/io.github.danieltibbing.palace-0.1.0.boardrgame",
-      "sha256": "e2a0fbe3347cfbd2d55c5dcbafd3e98b865f599627087460b65be9b1c418d785",
-      "sizeBytes": 179666
+      "sha256": "fb7fa8370d76c21cfee95449669b1f0ab6e670cb47e9a9bbe9ef87ce377e1453",
+      "sizeBytes": 181684
     },
     {
       "id": "io.github.danieltibbing.monopolydeal",
@@ -36,7 +36,7 @@
         "take-that"
       ],
       "version": "0.3.0",
-      "sdkVersion": "^0.1.0",
+      "sdkVersion": "^0.2.0",
       "players": {
         "min": 2,
         "max": 5
@@ -46,8 +46,8 @@
       "homepage": "https://github.com/DanielTibbing/boardr-monopoly-deal",
       "iconUrl": "icons/io.github.danieltibbing.monopolydeal.svg",
       "downloadUrl": "bundles/io.github.danieltibbing.monopolydeal/io.github.danieltibbing.monopolydeal-0.3.0.boardrgame",
-      "sha256": "160b497eafefdf5ddcc89744edde03a341882aaf3375b6501b52b3ba7df80081",
-      "sizeBytes": 213234
+      "sha256": "d0439f87b61dfb77aa3aca43d9551cf7f94f37db4a34f4991ed3d14632e5a11f",
+      "sizeBytes": 215180
     },
     {
       "id": "io.github.danieltibbing.solitaire",
@@ -60,7 +60,7 @@
         "classic"
       ],
       "version": "0.1.0",
-      "sdkVersion": "^0.1.0",
+      "sdkVersion": "^0.2.0",
       "players": {
         "min": 1,
         "max": 4
@@ -70,8 +70,8 @@
       "homepage": "https://github.com/DanielTibbing/boardr-solitaire",
       "iconUrl": "icons/io.github.danieltibbing.solitaire.svg",
       "downloadUrl": "bundles/io.github.danieltibbing.solitaire/io.github.danieltibbing.solitaire-0.1.0.boardrgame",
-      "sha256": "3210eee4bd869840f21f1bb8827d4f7e0f201bf93dddff59ac123399807894fb",
-      "sizeBytes": 177329
+      "sha256": "a236a658db68fd75ed28364883b095e8b0f10d61f8ff51d3b45369a0632e857b",
+      "sizeBytes": 179354
     },
     {
       "id": "io.github.danieltibbing.achtung-die-kurve",
@@ -84,7 +84,7 @@
         "action"
       ],
       "version": "0.1.0",
-      "sdkVersion": "^0.1.0",
+      "sdkVersion": "^0.2.0",
       "players": {
         "min": 1,
         "max": 4
@@ -94,8 +94,8 @@
       "homepage": "https://github.com/DanielTibbing/boardr-achtung-die-kurve",
       "iconUrl": "icons/io.github.danieltibbing.achtung-die-kurve.svg",
       "downloadUrl": "bundles/io.github.danieltibbing.achtung-die-kurve/io.github.danieltibbing.achtung-die-kurve-0.1.0.boardrgame",
-      "sha256": "a5b6c6558346babc1f70532ce76145718e5093a4f9b5af2724f095d10147bb89",
-      "sizeBytes": 169815
+      "sha256": "28a951c5944a565f697127df5065938354a65880c284c088d85103a86421f5c6",
+      "sizeBytes": 171828
     }
   ]
 }

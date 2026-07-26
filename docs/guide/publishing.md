@@ -49,6 +49,22 @@ CI validates the submission automatically: schema, duplicate ids, sha256/size ag
 - Use reverse-DNS you plausibly control — **`io.github.<handle>.<game>`** is the recommended shape. Ids are first-come-first-served; `com.boardr.*` is reserved.
 - To ship an update: bump `version`, re-pack, replace the bundle, update `sha256`/`sizeBytes` in your entry. CI warns reviewers when the PR author differs from the entry's `author`.
 
+## Updating the SDK
+
+When a new version of `@boardr/sdk` is released, you should update your game to ensure compatibility and leverage new features:
+
+1. **Check the latest version:** Run `npm info @boardr/sdk` to check the latest published version on npm.
+2. **Update dependencies:** In your game's `package.json`, update the version ranges of the following dependencies to the new version (e.g. `^0.2.0`):
+   - `@boardr/sdk` (in `dependencies`)
+   - `@boardr/cli` and `@boardr/testkit` (in `devDependencies`)
+3. **Update manifest:** In `boardr.game.json`, update the `"sdkVersion"` to point to the new range (e.g., `^0.2.0`). Also bump your game's `"version"` (e.g. from `0.1.0` to `0.1.1`) so tables know an update is available.
+4. **Test and verify:**
+   - Run `npm install` to apply the updates.
+   - Run `npm run typecheck` and `npm test` to ensure there are no compilation or API compatibility errors.
+   - Build (`npm run build`) and pack the bundle (`npx boardr pack`).
+5. **Update the registry:** Follow the normal PR process to update the bundle, the registry `games.json` entry (with the new game `version`, `sdkVersion`, `sha256` hash, and `sizeBytes`), and the download URL.
+
+
 ## The trust model, honestly
 
 Installing a game means **running its code on someone's table** — the logic runs in a worker, the UIs run in the shells. The registry pins bundles by sha256 and CI verifies integrity, but listing is *not* a security audit. That's why:

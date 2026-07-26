@@ -116,8 +116,28 @@ Same seed + same moves = identical game. Good suites assert: setup shape, a lega
 7. **`endTurn({ next })` for dynamic turn order.** Poker-style flow (dealer rotation, betting order, skipping folded players) is: track eligibility in `public`, always pass `next` explicitly. Never mutate `meta`/`currentPlayer` yourself.
 8. **Manifest `entries` must exist after `boardr build`** or the game is refused with a "run boardr build?" problem; a declared-but-missing `icon`/`rules` only warns. `phoneMode: "required"` removes hotseat — choose it when the game has secrets, `"optional"` otherwise, `"none"` for board-only.
 9. **For SDK contributors only**: new `@boardr/sdk` exports must also be added to `packages/sdk/shims/sdk.mjs`, and the board/phone shells rebuilt, before game UI bundles can import them.
+## Updating the SDK of a game
+
+When a new version of `@boardr/sdk` is released (e.g. going from `0.1.0` to `0.2.0`), existing standalone games need to be updated to remain compatible.
+
+1. **Find latest SDK version**: Run `npm info @boardr/sdk` to check the latest published version.
+2. **Update dependencies**: In the game's `package.json`, update:
+   - `@boardr/sdk` in `"dependencies"`
+   - `@boardr/cli` and `@boardr/testkit` in `"devDependencies"`
+   to match the target SDK version (e.g., `^0.2.0`).
+3. **Update manifest**: In `boardr.game.json`, set `"sdkVersion"` to match the new version range (e.g. `^0.2.0`). Also bump the game's `"version"` (e.g. from `0.1.0` to `0.1.1`) to signal to the lobby that an update is available.
+4. **Install & Verify**:
+   - Run `npm install` (or appropriate package manager).
+   - Run typecheck: `npm run typecheck` or `tsc --noEmit`.
+   - Run tests: `npm test` or `vitest`. Fix any API incompatibilities.
+   - Run build: `npm run build` or `npx boardr build`.
+5. **Pack & Register**:
+   - Run `npx boardr pack` to produce the new `.boardrgame` archive and print the registry JSON.
+   - Copy the new archive to `bundles/<id>/<id>-<version>.boardrgame` in the `boardr-community-contribs` repository.
+   - Update `games.json` in the registry with the bumped game version, updated `sdkVersion`, new `sha256` hash, and `sizeBytes`.
 
 ## Ship it
+
 
 Every game should carry its store presence in the manifest: `description` (≤280 chars), `tags` (≤6, kebab-case), `icon` (svg in the bundle), and `rules` (markdown rulebook — players open it from the table or their phones mid-game; structure it Goal / How to play / Scoring / Ending like the built-ins).
 
