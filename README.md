@@ -15,6 +15,20 @@ game downloads the pinned `.boardrgame` bundle and verifies its sha256.
 > integrity (hash, size, manifest agreement). It is **not** a security audit of
 > the game's code. Bundles execute on the board that installs them.
 
+## Running the table
+
+Download the packaged board app for your platform from the [releases page](https://github.com/DanielTibbing/boardr-community-contribs/releases) and open it.
+
+### macOS "App is damaged" Workaround
+Because the release builds are unsigned, macOS Gatekeeper will quarantine the app and display the warning: `"boardr" is damaged and can't be opened. You should move it to the Trash.`
+
+To bypass this, strip the quarantine flag in your terminal:
+```sh
+xattr -cr /path/to/boardr.app
+# e.g., if moved to Applications:
+xattr -cr /Applications/boardr.app
+```
+
 ## Submitting a game
 
 1. Build and pack your game:
