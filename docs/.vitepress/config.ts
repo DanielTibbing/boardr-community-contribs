@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'boardr',
   description: 'The digital boardgame table — build games for it',
-  // served from the community repo's GitHub Pages
-  base: '/boardr-community-contribs/',
+  // served from the custom domain boardr.dev (GitHub Pages)
+  base: '/',
   appearance: 'dark',
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/boardr-community-contribs/logo.svg' }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
   themeConfig: {
     logo: '/logo.svg',
     nav: [
