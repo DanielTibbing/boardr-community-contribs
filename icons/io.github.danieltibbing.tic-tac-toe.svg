@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <filter id="glow-x" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="glow-o" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)" />
+
+  <!-- Grid Lines -->
+  <line x1="192" y1="96" x2="192" y2="416" stroke="#334155" stroke-width="14" stroke-linecap="round" />
+  <line x1="320" y1="96" x2="320" y2="416" stroke="#334155" stroke-width="14" stroke-linecap="round" />
+  <line x1="96" y1="192" x2="416" y2="192" stroke="#334155" stroke-width="14" stroke-linecap="round" />
+  <line x1="96" y1="320" x2="416" y2="320" stroke="#334155" stroke-width="14" stroke-linecap="round" />
+
+  <!-- X Mark (Top Left) -->
+  <g filter="url(#glow-x)">
+    <line x1="120" y1="120" x2="168" y2="168" stroke="#38bdf8" stroke-width="16" stroke-linecap="round" />
+    <line x1="168" y1="120" x2="120" y2="168" stroke="#38bdf8" stroke-width="16" stroke-linecap="round" />
+  </g>
+
+  <!-- O Mark (Center) -->
+  <g filter="url(#glow-o)">
+    <circle cx="256" cy="256" r="32" fill="none" stroke="#f43f5e" stroke-width="16" />
+  </g>
+
+  <!-- X Mark (Bottom Right) -->
+  <g filter="url(#glow-x)">
+    <line x1="344" y1="344" x2="392" y2="392" stroke="#38bdf8" stroke-width="16" stroke-linecap="round" />
+    <line x1="392" y1="344" x2="344" y2="392" stroke="#38bdf8" stroke-width="16" stroke-linecap="round" />
+  </g>
+</svg>

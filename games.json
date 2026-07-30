@@ -4,7 +4,7 @@
     {
       "id": "io.github.danieltibbing.palace",
       "name": "Palace",
-      "description": "Shed every card: climb the discard pile, reset it with a 2, burn it with a 10 \u2014 then survive your blind face-down cards.",
+      "description": "Shed every card: climb the discard pile, reset it with a 2, burn it with a 10 — then survive your blind face-down cards.",
       "tags": [
         "cards",
         "shedding",
@@ -28,7 +28,7 @@
     {
       "id": "io.github.danieltibbing.monopolydeal",
       "name": "Monopoly Deal",
-      "description": "The fast card game: bank money, build property sets with houses and hotels, and raid rivals with Rent, Sly Deal, and Deal Breaker \u2014 first to three complete sets wins. Just Say No to fight back.",
+      "description": "The fast card game: bank money, build property sets with houses and hotels, and raid rivals with Rent, Sly Deal, and Deal Breaker — first to three complete sets wins. Just Say No to fight back.",
       "tags": [
         "cards",
         "strategy",
@@ -119,7 +119,30 @@
       "downloadUrl": "bundles/io.github.danieltibbing.pong/io.github.danieltibbing.pong-0.1.0.boardrgame",
       "sha256": "5284628da4066b9b6e0ef16457c317da223ec7fb757ccad59763d06ff065fa21",
       "sizeBytes": 178243
+    },
+    {
+      "id": "io.github.danieltibbing.tic-tac-toe",
+      "name": "Tic Tac Toe",
+      "description": "Classic 3x3 Tic Tac Toe on boardr! Align three marks in a row, column, or diagonal to win.",
+      "tags": [
+        "classic",
+        "2-player",
+        "strategy",
+        "quick"
+      ],
+      "version": "0.1.0",
+      "sdkVersion": "^0.2.0",
+      "players": {
+        "min": 2,
+        "max": 2
+      },
+      "phoneMode": "optional",
+      "author": "DanielTibbing",
+      "homepage": "https://github.com/DanielTibbing/boardr-tic-tac-toe",
+      "iconUrl": "icons/io.github.danieltibbing.tic-tac-toe.svg",
+      "downloadUrl": "bundles/io.github.danieltibbing.tic-tac-toe/io.github.danieltibbing.tic-tac-toe-0.1.0.boardrgame",
+      "sha256": "cf62bde04952b185507b87d570f542dca7ce2e0c265e2086fa7841c640311157",
+      "sizeBytes": 158551
     }
   ]
 }
-
