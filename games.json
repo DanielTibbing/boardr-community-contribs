@@ -11,8 +11,8 @@
         "family",
         "luck"
       ],
-      "version": "0.1.0",
-      "sdkVersion": "^0.2.0",
+      "version": "0.1.1",
+      "sdkVersion": "^0.3.0",
       "players": {
         "min": 2,
         "max": 5
@@ -21,9 +21,9 @@
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-palace",
       "iconUrl": "icons/io.github.danieltibbing.palace.svg",
-      "downloadUrl": "bundles/io.github.danieltibbing.palace/io.github.danieltibbing.palace-0.1.0.boardrgame",
-      "sha256": "6f53509ae82662a5bd1ecd8770293fb80dd3b6be2d91ba28d1559760eca85ca6",
-      "sizeBytes": 181545
+      "downloadUrl": "bundles/io.github.danieltibbing.palace/io.github.danieltibbing.palace-0.1.1.boardrgame",
+      "sha256": "f063de1bab2338694dd1f371e6d06a464219199016cc6bc6236a5154ff396c78",
+      "sizeBytes": 181696
     },
     {
       "id": "io.github.danieltibbing.monopolydeal",
@@ -59,8 +59,8 @@
         "co-op",
         "classic"
       ],
-      "version": "0.1.0",
-      "sdkVersion": "^0.2.0",
+      "version": "0.1.1",
+      "sdkVersion": "^0.3.0",
       "players": {
         "min": 1,
         "max": 4
@@ -69,9 +69,9 @@
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-solitaire",
       "iconUrl": "icons/io.github.danieltibbing.solitaire.svg",
-      "downloadUrl": "bundles/io.github.danieltibbing.solitaire/io.github.danieltibbing.solitaire-0.1.0.boardrgame",
-      "sha256": "a236a658db68fd75ed28364883b095e8b0f10d61f8ff51d3b45369a0632e857b",
-      "sizeBytes": 179354
+      "downloadUrl": "bundles/io.github.danieltibbing.solitaire/io.github.danieltibbing.solitaire-0.1.1.boardrgame",
+      "sha256": "e17ea01fc8f3eafbd5d5ceae9d6f5d4c46783c24ff06f8230199f2071679aea0",
+      "sizeBytes": 179527
     },
     {
       "id": "io.github.danieltibbing.achtung-die-kurve",
@@ -83,8 +83,8 @@
         "neon",
         "action"
       ],
-      "version": "0.1.0",
-      "sdkVersion": "^0.2.0",
+      "version": "0.1.1",
+      "sdkVersion": "^0.3.0",
       "players": {
         "min": 1,
         "max": 4
@@ -93,9 +93,9 @@
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-achtung-die-kurve",
       "iconUrl": "icons/io.github.danieltibbing.achtung-die-kurve.svg",
-      "downloadUrl": "bundles/io.github.danieltibbing.achtung-die-kurve/io.github.danieltibbing.achtung-die-kurve-0.1.0.boardrgame",
-      "sha256": "28a951c5944a565f697127df5065938354a65880c284c088d85103a86421f5c6",
-      "sizeBytes": 171828
+      "downloadUrl": "bundles/io.github.danieltibbing.achtung-die-kurve/io.github.danieltibbing.achtung-die-kurve-0.1.1.boardrgame",
+      "sha256": "0623e6d4bce73f518eee000a66505caa71099d94b0a5dcce4c77440979804904",
+      "sizeBytes": 171990
     },
     {
       "id": "io.github.danieltibbing.pong",
@@ -106,8 +106,8 @@
         "action",
         "party"
       ],
-      "version": "0.1.0",
-      "sdkVersion": "^0.2.0",
+      "version": "0.1.1",
+      "sdkVersion": "^0.3.0",
       "players": {
         "min": 2,
         "max": 8
@@ -116,9 +116,9 @@
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-pong",
       "iconUrl": "icons/io.github.danieltibbing.pong.svg",
-      "downloadUrl": "bundles/io.github.danieltibbing.pong/io.github.danieltibbing.pong-0.1.0.boardrgame",
-      "sha256": "5284628da4066b9b6e0ef16457c317da223ec7fb757ccad59763d06ff065fa21",
-      "sizeBytes": 178243
+      "downloadUrl": "bundles/io.github.danieltibbing.pong/io.github.danieltibbing.pong-0.1.1.boardrgame",
+      "sha256": "97969f6acc0734d08e51f044f8b842446d054ddda2272fe708448cc9c96e410e",
+      "sizeBytes": 178412
     },
     {
       "id": "io.github.danieltibbing.tic-tac-toe",
@@ -130,8 +130,8 @@
         "strategy",
         "quick"
       ],
-      "version": "0.1.0",
-      "sdkVersion": "^0.2.0",
+      "version": "0.1.1",
+      "sdkVersion": "^0.3.0",
       "players": {
         "min": 2,
         "max": 2
@@ -140,9 +140,33 @@
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-tic-tac-toe",
       "iconUrl": "icons/io.github.danieltibbing.tic-tac-toe.svg",
-      "downloadUrl": "bundles/io.github.danieltibbing.tic-tac-toe/io.github.danieltibbing.tic-tac-toe-0.1.0.boardrgame",
-      "sha256": "cf62bde04952b185507b87d570f542dca7ce2e0c265e2086fa7841c640311157",
-      "sizeBytes": 158551
+      "downloadUrl": "bundles/io.github.danieltibbing.tic-tac-toe/io.github.danieltibbing.tic-tac-toe-0.1.1.boardrgame",
+      "sha256": "ccdd3544ca866382ae1a96b16dc860806130b05374a2401c9df9af4843e612a6",
+      "sizeBytes": 158722
+    },
+    {
+      "id": "io.github.danieltibbing.pinball",
+      "name": "Boardr Pinball",
+      "description": "Classic single-player pinball for 1–4 players taking turns. Hit bumpers, light up lanes, and chase the high score. Control the flippers from the board or your phone!",
+      "tags": [
+        "arcade",
+        "action",
+        "single-player",
+        "classic"
+      ],
+      "version": "0.1.1",
+      "sdkVersion": "^0.3.0",
+      "players": {
+        "min": 1,
+        "max": 4
+      },
+      "phoneMode": "optional",
+      "author": "DanielTibbing",
+      "homepage": "https://github.com/DanielTibbing/boardr-pinball",
+      "iconUrl": "icons/io.github.danieltibbing.pinball.svg",
+      "downloadUrl": "bundles/io.github.danieltibbing.pinball/io.github.danieltibbing.pinball-0.1.1.boardrgame",
+      "sha256": "d7b76cdce011ef1aaf5575d4992d45692ef026cd0a15c498fffc71649764f3c1",
+      "sizeBytes": 170996
     }
   ]
 }

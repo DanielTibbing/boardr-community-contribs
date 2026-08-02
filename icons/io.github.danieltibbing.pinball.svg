@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#12122b" />
+      <stop offset="100%" stop-color="#05050a" />
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)" stroke="#05d9e8" stroke-width="8" />
+
+  <!-- Outer Pinball Frame -->
+  <rect x="96" y="64" width="320" height="384" rx="16" fill="none" stroke="#05d9e8" stroke-width="6" filter="url(#glow)" />
+
+  <!-- Bumpers -->
+  <circle cx="200" cy="180" r="28" fill="#ff2a6d" filter="url(#glow)" />
+  <circle cx="312" cy="180" r="28" fill="#05d9e8" filter="url(#glow)" />
+  <circle cx="256" cy="248" r="32" fill="#ffb703" filter="url(#glow)" />
+
+  <!-- Slingshots -->
+  <polygon points="144,320 176,380 144,400" fill="#05d9e8" opacity="0.6" stroke="#05d9e8" stroke-width="4" />
+  <polygon points="368,320 336,380 368,400" fill="#05d9e8" opacity="0.6" stroke="#05d9e8" stroke-width="4" />
+
+  <!-- Flippers -->
+  <rect x="180" y="400" width="64" height="16" rx="8" fill="#ff2a6d" transform="rotate(-15 180 400)" filter="url(#glow)" />
+  <rect x="268" y="400" width="64" height="16" rx="8" fill="#ff2a6d" transform="rotate(15 332 400)" filter="url(#glow)" />
+
+  <!-- Chrome Ball -->
+  <circle cx="256" cy="340" r="16" fill="#ffffff" filter="url(#glow)" />
+</svg>
