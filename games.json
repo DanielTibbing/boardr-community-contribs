@@ -35,8 +35,8 @@
         "family",
         "take-that"
       ],
-      "version": "0.4.4",
-      "sdkVersion": "^0.2.0",
+      "version": "0.5.0",
+      "sdkVersion": "^0.3.0",
       "players": {
         "min": 2,
         "max": 5
@@ -45,9 +45,9 @@
       "author": "DanielTibbing",
       "homepage": "https://github.com/DanielTibbing/boardr-monopoly-deal",
       "iconUrl": "icons/io.github.danieltibbing.monopolydeal.svg",
-      "downloadUrl": "bundles/io.github.danieltibbing.monopolydeal/io.github.danieltibbing.monopolydeal-0.4.4.boardrgame",
-      "sha256": "b448f302fa6076e35477b1d3450b94d0f7462bc1976936bb9af584a5e751422f",
-      "sizeBytes": 222072
+      "downloadUrl": "bundles/io.github.danieltibbing.monopolydeal/io.github.danieltibbing.monopolydeal-0.5.0.boardrgame",
+      "sha256": "4e734f7f507ca8560f6c12b26d936f80ed65b068a0c20320d534bced25321272",
+      "sizeBytes": 223954
     },
     {
       "id": "io.github.danieltibbing.solitaire",
