@@ -79,14 +79,15 @@ Cards: `makeDeck()` (52 cards as `"AS"`, `"TD"` strings), `rankOf`, `suitOf`, `r
 `src/board.tsx` / `src/phone.tsx` export default React components. Import React normally — the build aliases it to the shell's instance.
 
 ```tsx
-export default function Board({ view, meta, dispatch }: BoardUiProps<V>) {…}
+export default function Board({ view, meta, table, dispatch }: BoardUiProps<V>) {…}
 export default function Phone({ playerID, view, meta, isActive, dispatch }: PhoneUiProps<V>) {…}
 ```
 
 - `view` = that client's filtered state: board gets `{ public }`; phone `p` gets `{ public, secret: <secret[p]> }`.
 - `meta` = `{ players, currentPlayer, turn, gameover, legalMoves }`. Drive button enablement from `meta.legalMoves[moveName]` — it evaluates your `canMove` guards server-side.
+- `table` (board only) = pixel size `{ width, height }` of the game frame — no vw/vh hacks needed.
 - **The two dispatches differ.** Phone: `await dispatch(move, args)` resolves `{ ok: true } | { ok: false, reason }` — always surface `reason`, it's your own `ctx.invalid` message. Board: `dispatch(move, args, opts?)` is fire-and-forget (`void`; rejections surface as a shell toast); its `opts.as` names which player acts, **defaulting to `currentPlayer`** — that default is what makes hotseat board-only games work.
-- Helpers in `@boardr/sdk/ui`: `tableLayout`/`Seat` (place widgets around table edges, rotated toward each player), `WaitingOverlay`, `MarkdownLite`.
+- Helpers in `@boardr/sdk/ui`: `tableLayout`/`Seat` (place widgets around table edges, rotated toward each player), `tableCenter(seatCount)` (center area guaranteed free of seats; parent needs `position: relative`), `uid()` (secure-context-safe ids — UI-only, never in game logic), `WaitingOverlay`, `MarkdownLite`.
 
 ### Tests
 
@@ -104,6 +105,15 @@ h.match.snapshot().state   // FULL state incl. internal — for asserting hidden
 When a test needs to know hidden information (the next card in the deck, the bag order), read it from `h.match.snapshot().state.internal` — the filtered views deliberately can't show it to you.
 
 Same seed + same moves = identical game. Good suites assert: setup shape, a legal-move happy path, `ctx.invalid` rejections, turn order, the end condition, and — for hidden-info games — that `JSON.stringify(h.getState())` and other players' views do **not** contain secret values.
+
+For UI smoke tests — "does it render for this state, and does the HTML contain X" — `renderBoardUi`/`renderPhoneUi` render your components to static HTML against a real match (no jsdom; these are contract tests, not interaction tests). The returned `dispatch` stub records calls, so you can assert what a handler would send.
+
+```tsx
+const h = createTestMatch(game, { numPlayers: 2, seed: 'ui' })
+expect(renderBoardUi(Board, h.match).html).toContain('Player 0')   // table prop defaults to 1280×800
+const phone = renderPhoneUi(Phone, h.match, 'p1')                   // p1's secret view, p1's legalMoves
+expect(phone.html).not.toContain(otherPlayersSecret)
+```
 
 ## Pitfalls (each has burned someone)
 

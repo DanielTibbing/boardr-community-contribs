@@ -173,7 +173,7 @@ Board and phone UIs are React components in your bundle; the shells load them at
 
 ```tsx
 // src/board.tsx — the shared table screen
-export default function Board({ view, meta, dispatch }: BoardUiProps<MyView>) { … }
+export default function Board({ view, meta, table, dispatch }: BoardUiProps<MyView>) { … }
 
 // src/phone.tsx — one player's private controller
 export default function Phone({ playerID, view, meta, isActive, dispatch }: PhoneUiProps<MyView>) { … }
@@ -181,7 +181,8 @@ export default function Phone({ playerID, view, meta, isActive, dispatch }: Phon
 
 - `view` is that client's filtered state; `meta` carries `players`, `currentPlayer`, `gameover`, and `legalMoves` (from your `canMove` guards — use it to enable buttons).
 - `dispatch(move, args)` returns `{ ok } | { ok: false, reason }` — surface the reason, it's your `ctx.invalid` message.
-- `@boardr/sdk/ui` has helpers: `tableLayout`/`Seat` (position widgets around the table edges, rotated to face each player), `WaitingOverlay`, and `MarkdownLite` (the same renderer the shells use for rulebooks).
+- The board UI also gets a `table` prop: the pixel size `{ width, height }` of the game frame, so you can size layouts without vw/vh hacks.
+- `@boardr/sdk/ui` has helpers: `tableLayout`/`Seat` (position widgets around the table edges, rotated to face each player), `tableCenter(seatCount)` (a center area guaranteed free of seats), `uid()` (secure-context-safe ids; UI-only, never in game logic), `WaitingOverlay`, and `MarkdownLite` (the same renderer the shells use for rulebooks).
 
 ## Testing
 
@@ -197,3 +198,11 @@ expect(h.match.gameover).toBeNull()
 ```
 
 Same seed + same moves = same game, so tests are exact. Use `h.match.dispatch(...)` directly when you want to *assert* a rejection.
+
+The testkit also smoke-tests your UIs — `renderBoardUi`/`renderPhoneUi` render a component to static HTML against a real match (no jsdom; rendering/content contracts, not interactions). The board helper passes a default `table` of 1280×800 (override via opts), the phone helper takes a player ID and gives that player's view and `legalMoves`; both return a recording `dispatch` stub alongside the HTML.
+
+```tsx
+const h = createTestMatch(game, { numPlayers: 2, seed: 'ui' })
+expect(renderBoardUi(Board, h.match).html).toContain('Player 0')
+expect(renderPhoneUi(Phone, h.match, 'p1').html).toContain(mySecret)
+```
